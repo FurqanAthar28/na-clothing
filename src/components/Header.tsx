@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import siteConfig from "@/data/siteConfig";
 
 export default function Header() {
@@ -14,9 +15,8 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link href="/" className="brand-logo" onClick={closeMenu}>
-          Koshishein
-          <span>Watches</span>
+        <Link href="/" className="header-brand" onClick={closeMenu}>
+          <BrandLogo />
         </Link>
 
         <nav className="desktop-nav">

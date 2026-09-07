@@ -5,11 +5,11 @@ const siteConfig = {
 
   engravingPrice: 500,
 
-  whatsappNumber: "923345137111",
+  whatsappNumber: "923298910011",
 
-  location: "Faisalabad, Pakistan",
+  location: "Khayaban Colony 2,Faisalabad, Pakistan",
 
-  email: "contact@koshishein.com",
+  email: "takhlaq0@gmail.com",
 
   instagramUrl:
     "https://www.instagram.com/koshishein1?stkn=eDhkazcycjdkNHpz&utm_source=qr",

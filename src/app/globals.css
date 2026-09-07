@@ -10,12 +10,16 @@
 
 :root {
   --color-cream: #f8f3eb;
-  --color-maroon: #641f2b;
+  --color-brown: #641f2b;
   --color-gold: #c9a45c;
   --color-black: #1c1c1c;
-  --color-white: #ffffff;
+  --color-white: #e5dddd;
   --color-light: #f1ebe2;
+  --color-green: #1c4d3f;
+  --color-brown: #5c3a2e;
+
   --color-border: rgba(28, 28, 28, 0.12);
+  
 
   --container-width: 1280px;
   --section-padding: 90px;
@@ -100,24 +104,71 @@ p {
 /* Brand */
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
-  color: var(--color-maroon);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: 0.02em;
+  align-items: center;
+  color: var(--color-brown);
 }
 
-.brand-logo span {
-  margin-top: 6px;
-  color: var(--color-black);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 9px;
+.brand-logo--dark {
+  animation: logo-name-reveal 650ms 140ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.brand-logo-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  line-height: 1;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
+}
+
+.brand-logo-wordmark {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo--dark .brand-logo-name {
+  background: linear-gradient(105deg, #3f251c 0%, #71442d 42%, #a36a43 70%, #4d2f23 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.brand-logo-wave-overlay {
+  position: absolute;
+  width: calc(100% + 16px);
+  height: 24px;
+  top: 50%;
+  left: 50%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  transform: translate(-50%, -50%);
+  opacity: 0.82;
+  pointer-events: none;
+}
+
+.brand-logo--dark .brand-logo-wave-overlay {
+  color: #78482f;
+}
+
+.brand-logo--light {
+  color: var(--color-white);
+}
+
+@keyframes logo-name-reveal {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo--dark {
+    animation: none;
+  }
 }
 
 /* Desktop navigation */
@@ -145,12 +196,12 @@ p {
   bottom: 2px;
   width: 0;
   height: 1px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   transition: width 0.25s ease;
 }
 
 .desktop-nav a:hover {
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .desktop-nav a:hover::after {
@@ -165,7 +216,7 @@ p {
   justify-content: center;
   min-height: 42px;
   padding: 0 20px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-green);
   color: var(--color-white);
   font-size: 12px;
   font-weight: 600;
@@ -212,7 +263,7 @@ p {
    ========================================= */
 
 .important-banner {
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -349,9 +400,10 @@ p {
     min-height: 72px;
   }
 
-  .brand-logo {
-    font-size: 24px;
+  .brand-logo-name {
+    font-size: 22px;
   }
+
 
   .desktop-nav,
   .header-whatsapp {
@@ -382,7 +434,7 @@ p {
     margin-top: 10px;
     padding: 14px 18px;
     border: 0;
-    background-color: var(--color-maroon);
+    background-color: var(--color-brown);
     color: var(--color-white);
     text-align: center;
   }
@@ -455,7 +507,7 @@ p {
 
 .hero-eyebrow {
   margin-bottom: 20px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -473,7 +525,7 @@ p {
 
 .hero h1 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .hero-description {
@@ -499,7 +551,7 @@ p {
 }
 
 .hero-price strong {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 500;
@@ -531,7 +583,7 @@ p {
 }
 
 .button-primary {
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -585,7 +637,7 @@ p {
   bottom: 30px;
   min-width: 150px;
   padding: 16px 20px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -700,7 +752,7 @@ p {
 
 .section-eyebrow {
   margin-bottom: 18px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
@@ -716,7 +768,7 @@ p {
 
 .about-snippet h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .about-snippet-content > p:not(.section-eyebrow) {
@@ -732,8 +784,8 @@ p {
   gap: 12px;
   margin-top: 10px;
   padding-bottom: 5px;
-  border-bottom: 1px solid var(--color-maroon);
-  color: var(--color-maroon);
+  border-bottom: 1px solid var(--color-brown);
+  color: var(--color-brown);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -807,7 +859,7 @@ p {
 
 .section-heading h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .section-heading > p {
@@ -844,7 +896,7 @@ p {
 }
 
 .service-number {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -868,7 +920,7 @@ p {
 .service-price {
   display: block;
   margin-bottom: 22px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -887,7 +939,7 @@ p {
 }
 
 .service-link span {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 17px;
   transition: transform 0.2s ease;
 }
@@ -963,7 +1015,7 @@ p {
 
 .step-number {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -1003,7 +1055,7 @@ p {
 }
 
 .how-it-works-note strong {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 13px;
 }
 
@@ -1137,7 +1189,7 @@ p {
   height: 36px;
   flex-shrink: 0;
   border: 1px solid rgba(28, 28, 28, 0.25);
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 18px;
   transition:
     background-color 0.2s ease,
@@ -1145,7 +1197,7 @@ p {
 }
 
 .product-arrow:hover {
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -1183,7 +1235,7 @@ p {
 
 .collection-page-banner {
   padding: 110px 0 100px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -1245,7 +1297,7 @@ p {
 .collection-intro h2 span,
 .collection-heading h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .stitching-price {
@@ -1256,7 +1308,7 @@ p {
 }
 
 .stitching-price strong {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 32px;
   font-weight: 400;
@@ -1278,7 +1330,7 @@ p {
   justify-content: center;
   min-height: 48px;
   padding: 0 24px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
   font-size: 11px;
   font-weight: 600;
@@ -1375,7 +1427,7 @@ p {
 
 .collection-product-info strong {
   flex-shrink: 0;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 12px;
   font-weight: 600;
 }
@@ -1394,12 +1446,12 @@ p {
 }
 
 .product-order-link span {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 17px;
 }
 
 .product-order-link:hover {
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 /* =========================================
@@ -1514,7 +1566,7 @@ p {
 
 .about-page-banner {
   padding: 90px 0 85px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -1582,7 +1634,7 @@ p {
 
 .about-story-content h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .about-story-content > p:not(.section-eyebrow) {
@@ -1620,7 +1672,7 @@ p {
 
 .about-section-heading h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .about-section-heading > p {
@@ -1657,7 +1709,7 @@ p {
 }
 
 .about-service-number {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -1704,7 +1756,7 @@ p {
 
 .about-values-heading h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .about-values-grid {
@@ -1724,7 +1776,7 @@ p {
 .about-value > span {
   display: block;
   margin-bottom: 55px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -1776,7 +1828,7 @@ p {
 
 .about-craft-content h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .about-craft-content > p:not(.section-eyebrow) {
@@ -1805,7 +1857,7 @@ p {
 
 .about-cta-section {
   padding: 110px 0;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
   text-align: center;
 }
@@ -1837,7 +1889,7 @@ p {
 
 .about-cta-section .primary-button {
   background-color: var(--color-white);
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .about-cta-section .primary-button:hover {
@@ -1951,7 +2003,7 @@ p {
 
 .catalog-page-banner {
   padding: 110px 0 100px;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -2003,7 +2055,7 @@ p {
 
 .catalog-heading h2 span {
   display: block;
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .catalog-heading > p {
@@ -2069,7 +2121,7 @@ p {
 
 .catalog-card-info strong {
   flex-shrink: 0;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 12px;
   font-weight: 600;
 }
@@ -2089,13 +2141,13 @@ p {
 }
 
 .catalog-card-link span {
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 17px;
   transition: transform 0.2s ease;
 }
 
 .catalog-card-link:hover {
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .catalog-card-link:hover span {
@@ -2116,7 +2168,7 @@ p {
   align-items: center;
   gap: 10px;
   margin-bottom: 45px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -2166,7 +2218,7 @@ p {
 .catalog-product-price {
   display: block;
   margin-bottom: 28px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 30px;
   font-weight: 400;
@@ -2188,7 +2240,7 @@ p {
 .catalog-product-note strong {
   display: block;
   margin-bottom: 8px;
-  color: var(--color-maroon);
+  color: var(--color-brown);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -2208,7 +2260,7 @@ p {
 
 .catalog-stitching-cta {
   padding: 100px 0;
-  background-color: var(--color-maroon);
+  background-color: var(--color-brown);
   color: var(--color-white);
 }
 
@@ -2240,7 +2292,7 @@ p {
 
 .catalog-stitching-cta .primary-button {
   background-color: var(--color-white);
-  color: var(--color-maroon);
+  color: var(--color-brown);
 }
 
 .catalog-stitching-cta .primary-button:hover {

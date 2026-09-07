@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BrandLogo from "@/components/BrandLogo";
 import siteConfig from "@/data/siteConfig";
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer-brand">
           <Link href="/" className="footer-logo">
-            Koshishein
+            <BrandLogo variant="light" />
           </Link>
 
           <p>
