@@ -59,6 +59,24 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>© 2026 Koshishein. All rights reserved.</p>
+
+        <div className="footer-socials">
+          <a
+            href={siteConfig.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            href={siteConfig.facebookUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+        </div>
       </div>
     </footer>
   );

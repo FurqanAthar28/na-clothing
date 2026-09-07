@@ -10,6 +10,11 @@ const siteConfig = {
   location: "Faisalabad, Pakistan",
 
   email: "contact@koshishein.com",
+
+  instagramUrl:
+    "https://www.instagram.com/koshishein1?stkn=eDhkazcycjdkNHpz&utm_source=qr",
+
+  facebookUrl: "https://www.facebook.com/share/1CYQyve6Hn/?mibextid=wwXIfr",
 };
 
 export default siteConfig;
