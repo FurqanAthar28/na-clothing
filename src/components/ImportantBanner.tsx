@@ -5,9 +5,9 @@ export default function ImportantBanner() {
     <div className="important-banner">
       <div className="container important-banner-inner">
         <p>
-          Custom stitching on your own fabric —{" "}
-          <strong>PKR {siteConfig.stitchingPrice} per dress.</strong>{" "}
-          Fabric & delivery charges are separate.
+          Custom engraving on your own watch —{" "}
+          <strong>PKR {siteConfig.engravingPrice} per watch.</strong>{" "}
+          Delivery charges are separate.
         </p>
       </div>
     </div>

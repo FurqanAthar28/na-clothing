@@ -8,28 +8,28 @@ export default function Hero() {
       <div className="container hero-inner">
         {/* Left side: Main message */}
         <div className="hero-content">
-          <p className="hero-eyebrow">CLASSIC STITCHING SINCE 1990</p>
+          <p className="hero-eyebrow">TIMELESS WATCHES, CHOSEN WITH CARE</p>
 
           <h1>
-            Classic Stitching
-            <span>for Your Chosen Brand Dress</span>
+            Watches That
+            <span>Match Your Story</span>
           </h1>
 
           <p className="hero-description">
-            Bring your own fabric and let us create a beautifully stitched
-            dress with the fitting and finishing you expect.
+            Explore our signature and everyday collections, or send us your
+            own watch for custom engraving and personalization.
           </p>
 
           <div className="hero-price">
-            <span>Stitching from</span>
-            <strong>PKR {siteConfig.stitchingPrice}</strong>
-            <span>per dress</span>
+            <span>Engraving from</span>
+            <strong>PKR {siteConfig.engravingPrice}</strong>
+            <span>per watch</span>
           </div>
 
           <div className="hero-actions">
             <a
               href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
-                "Assalamualaikum, I want to order a dress. Stitching is PKR 1200."
+                "Assalamualaikum, I want to order a watch."
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -44,12 +44,12 @@ export default function Hero() {
           </div>
         </div>
 
-        
+
         <div className="hero-image-wrapper">
           <div className="hero-image">
             <Image
-              src="/images/products/deep-burgundy-classic.jpg"
-              alt="N.A Clothing classic stitched dress"
+              src="/images/hero-watch.jpg"
+              alt="Koshishein signature steel watch"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -57,8 +57,8 @@ export default function Hero() {
           </div>
 
           <div className="hero-image-label">
-            <span>N.A</span>
-            <small>CLOTHING BRAND</small>
+            <span>Koshishein</span>
+            <small>WATCHES</small>
           </div>
         </div>
       </div>

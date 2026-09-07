@@ -8,12 +8,12 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer-brand">
           <Link href="/" className="footer-logo">
-            N.A
+            Koshishein
           </Link>
 
           <p>
-            Classic stitching, elegant handmade designs, and ready-to-wear
-            dresses crafted with care.
+            Signature and everyday watches, plus custom engraving, crafted
+            with care.
           </p>
 
           <p className="footer-location">{siteConfig.location}</p>
@@ -33,9 +33,9 @@ export default function Footer() {
         <div className="footer-column">
           <h3>Our Services</h3>
 
-          <Link href="/collection">Custom Stitching</Link>
-          <Link href="/collection">Handmade Collection</Link>
-          <Link href="/collection">Plain Stitched Dresses</Link>
+          <Link href="/collection">Engraving & Personalization</Link>
+          <Link href="/collection">Signature Collection</Link>
+          <Link href="/collection">Everyday Classics</Link>
           <Link href="/catalog">View Catalog</Link>
         </div>
 
@@ -58,25 +58,7 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <p>© 2026 N.A Clothing Brand. All rights reserved.</p>
-
-        <div className="footer-socials">
-          <a
-            href={siteConfig.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-
-          <a
-            href={siteConfig.facebookUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Facebook
-          </a>
-        </div>
+        <p>© 2026 Koshishein. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,19 +1,15 @@
 const siteConfig = {
-  brandName: "N.A Clothing Brand",
+  brandName: "Koshishein",
 
-  tagline: "Classic stitching since 1990.",
+  tagline: "Timeless watches, chosen with care.",
 
-  stitchingPrice: 1200,
+  engravingPrice: 500,
 
-  whatsappNumber: "923314799811",
+  whatsappNumber: "923345137111",
 
-  location: "Okara, Pakistan",
+  location: "Faisalabad, Pakistan",
 
-  email: "your-email@example.com",
-
-  instagramUrl: "#",
-
-  facebookUrl: "#",
+  email: "contact@koshishein.com",
 };
 
 export default siteConfig;

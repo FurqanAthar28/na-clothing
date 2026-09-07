@@ -15,8 +15,8 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <Link href="/" className="brand-logo" onClick={closeMenu}>
-          N.A
-          <span>Clothing Brand</span>
+          Koshishein
+          <span>Watches</span>
         </Link>
 
         <nav className="desktop-nav">

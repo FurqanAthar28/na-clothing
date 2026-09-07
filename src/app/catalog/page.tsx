@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {
-  handmadeCollection,
-  plainStitchedCollection,
+  signatureCollection,
+  everydayClassics,
 } from "@/data/collection";
+import siteConfig from "@/data/siteConfig";
 
 type CatalogPageProps = {
   searchParams: Promise<{
@@ -19,8 +20,8 @@ export default async function CatalogPage({
   const selectedProductId = params.product;
 
   const products = [
-    ...handmadeCollection,
-    ...plainStitchedCollection,
+    ...signatureCollection,
+    ...everydayClassics,
   ];
 
   const selectedProduct = selectedProductId
@@ -32,13 +33,13 @@ export default async function CatalogPage({
       {/* Page Banner */}
       <section className="catalog-page-banner">
         <div className="container">
-          <p className="section-eyebrow">N.A CLOTHING</p>
+          <p className="section-eyebrow">KOSHISHEIN</p>
 
           <h1>Our Catalog</h1>
 
           <p>
-            Explore our handmade designs and ready-to-wear dresses. Choose a
-            design and contact us directly to place your order.
+            Explore our signature designs and everyday classics. Choose a
+            watch and contact us directly to place your order.
           </p>
         </div>
       </section>
@@ -64,7 +65,7 @@ export default async function CatalogPage({
               </div>
 
               <div className="catalog-product-content">
-                <p className="section-eyebrow">N.A CLOTHING</p>
+                <p className="section-eyebrow">KOSHISHEIN</p>
 
                 <h2>{selectedProduct.name}</h2>
 
@@ -86,7 +87,7 @@ export default async function CatalogPage({
                 </div>
 
                 <Link
-                  href={`https://wa.me/923280547405?text=${encodeURIComponent(
+                  href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
                     `Assalamualaikum, I want to order ${selectedProduct.name}. Price: PKR ${selectedProduct.price.toLocaleString()}`
                   )}`}
                   className="primary-button"
@@ -105,7 +106,7 @@ export default async function CatalogPage({
           <div className="container">
             <div className="catalog-heading">
               <div>
-                <p className="section-eyebrow">ALL DESIGNS</p>
+                <p className="section-eyebrow">ALL WATCHES</p>
 
                 <h2>
                   Find your
@@ -114,7 +115,7 @@ export default async function CatalogPage({
               </div>
 
               <p>
-                Browse our current designs and select any product to view its
+                Browse our current watches and select any piece to view its
                 details and place an order.
               </p>
             </div>
@@ -160,23 +161,23 @@ export default async function CatalogPage({
         </section>
       )}
 
-      {/* Custom Stitching CTA */}
+      {/* Custom Engraving CTA */}
       <section className="catalog-stitching-cta">
         <div className="container">
-          <p className="section-eyebrow">CUSTOM STITCHING</p>
+          <p className="section-eyebrow">CUSTOM ENGRAVING</p>
 
           <h2>
             Have your own
-            <span>fabric?</span>
+            <span>watch?</span>
           </h2>
 
           <p>
-            Bring your own fabric and chosen design. Our stitching team can
-            create a beautifully finished dress for PKR 1,200.
+            Bring your own watch and chosen design. Our team can engrave a
+            beautifully finished keepsake for PKR 500.
           </p>
 
           <Link href="/collection" className="primary-button">
-            Explore Custom Stitching
+            Explore Custom Engraving
           </Link>
         </div>
       </section>

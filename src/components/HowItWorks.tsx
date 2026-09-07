@@ -1,27 +1,27 @@
 const steps = [
   {
     number: "01",
-    title: "Send Your Fabric",
+    title: "Send Your Watch",
     description:
-      "Send your chosen brand fabric to us for custom stitching.",
+      "Send us your own watch for custom engraving and personalization.",
   },
   {
     number: "02",
-    title: "Share Your Size",
+    title: "Share Your Design",
     description:
-      "Share your measurements or size details with us on WhatsApp.",
+      "Share the design, text, or initials you'd like engraved with us on WhatsApp.",
   },
   {
     number: "03",
-    title: "We Stitch",
+    title: "We Engrave",
     description:
-      "Our experienced stitching team carefully prepares your dress.",
+      "Our experienced team carefully engraves and finishes your watch.",
   },
   {
     number: "04",
     title: "We Deliver",
     description:
-      "Once your dress is ready, we send it to you across Pakistan.",
+      "Once your watch is ready, we send it to you across Pakistan.",
   },
 ];
 
@@ -34,14 +34,14 @@ export default function HowItWorks() {
             <p className="section-eyebrow">HOW IT WORKS</p>
 
             <h2>
-              From your fabric
-              <span>to your finished dress.</span>
+              From your watch
+              <span>to a personal keepsake.</span>
             </h2>
           </div>
 
           <p>
-            Getting your chosen dress stitched with N.A Clothing is simple.
-            Just follow four easy steps.
+            Getting your watch engraved with Koshishein is simple. Just follow
+            four easy steps.
           </p>
         </div>
 
@@ -60,9 +60,9 @@ export default function HowItWorks() {
         </div>
 
         <div className="how-it-works-note">
-          <strong>Custom stitching: PKR 1,200 per dress.</strong>
+          <strong>Custom engraving: PKR 500 per watch.</strong>
           <span>
-            Fabric and delivery charges are separate.
+            Delivery charges are separate.
           </span>
         </div>
       </div>

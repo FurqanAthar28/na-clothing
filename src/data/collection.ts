@@ -4,59 +4,62 @@ export type CollectionProduct = {
   image: string;
   price: number;
   description: string;
-  category: "Alif Handmade" | "Plain Stitched";
+  category: "Signature Collection" | "Everyday Classics";
 };
 
-export const handmadeCollection: CollectionProduct[] = [
+export const signatureCollection: CollectionProduct[] = [
   {
     id: 1,
-    name: "Floral Navy Maxi",
-    image: "/images/products/floral-navy-maxi.jpg",
-    price: 2800,
-    description: "An elegant floral design with a classic silhouette.",
-    category: "Alif Handmade",
+    name: "Heritage Chronograph",
+    image: "/images/products/heritage-chronograph.jpg",
+    price: 18500,
+    description:
+      "A refined chronograph with a warm leather strap and a dial built for detail.",
+    category: "Signature Collection",
   },
   {
     id: 2,
-    name: "Taupe Black Embroidery",
-    image: "/images/products/modern-taupe-black-embroidery.jpg",
-    price: 3000,
-    description: "A refined combination of subtle tones and handmade detail.",
-    category: "Alif Handmade",
+    name: "Midnight Steel Diver",
+    image: "/images/products/midnight-steel-diver.jpg",
+    price: 21000,
+    description:
+      "A bold steel diver with a precision bezel, built for everyday confidence.",
+    category: "Signature Collection",
   },
   {
     id: 3,
-    name: "Vibrant Mustard",
-    image: "/images/products/vibrant-mustard.jpg",
-    price: 2800,
-    description: "A vibrant classic design with an elegant finish.",
-    category: "Alif Handmade",
+    name: "Executive Steel Elite",
+    image: "/images/products/executive-steel-elite.jpg",
+    price: 19800,
+    description:
+      "A commanding steel bracelet watch designed for the boardroom and beyond.",
+    category: "Signature Collection",
   },
 ];
 
-export const plainStitchedCollection: CollectionProduct[] = [
+export const everydayClassics: CollectionProduct[] = [
   {
     id: 4,
-    name: "Classic Black",
-    image: "/images/products/classic-black-solo.jpg",
-    price: 2500,
-    description: "A simple and timeless stitched dress for everyday wear.",
-    category: "Plain Stitched",
+    name: "Minimalist Canvas Black",
+    image: "/images/products/minimalist-canvas-black.jpg",
+    price: 8500,
+    description: "A clean minimalist face on a durable canvas strap for daily wear.",
+    category: "Everyday Classics",
   },
   {
     id: 5,
-    name: "Deep Burgundy Classic",
-    image: "/images/products/deep-burgundy-classic.jpg",
-    price: 2500,
-    description: "A rich burgundy dress with a clean classic look.",
-    category: "Plain Stitched",
+    name: "Trail Leather Tan",
+    image: "/images/products/trail-leather-tan.jpg",
+    price: 8000,
+    description: "A rugged tan leather watch built for outdoor days and easy style.",
+    category: "Everyday Classics",
   },
   {
     id: 6,
-    name: "Mint Green Solo",
-    image: "/images/products/mint-green-solo.jpg",
-    price: 2500,
-    description: "A soft and elegant everyday stitched dress.",
-    category: "Plain Stitched",
+    name: "Rose Gold Classic",
+    image: "/images/products/rose-gold-classic.jpg",
+    price: 9200,
+    description: "An elegant rose gold case with a crisp white dial for everyday grace.",
+    category: "Everyday Classics",
   },
 ];

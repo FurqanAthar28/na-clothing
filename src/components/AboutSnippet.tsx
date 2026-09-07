@@ -8,7 +8,7 @@ export default function AboutSnippet() {
         <div className="about-snippet-image">
           <Image
             src="/images/founder.jpg"
-            alt="Founder of N.A Clothing Brand"
+            alt="Koshishein heritage watch"
             fill
             sizes="(max-width: 768px) 100vw, 45vw"
           />
@@ -19,19 +19,18 @@ export default function AboutSnippet() {
 
           <h2>
             A legacy of
-            <span>classic stitching.</span>
+            <span>timeless craftsmanship.</span>
           </h2>
 
           <p>
-            Nasreen Akhtar began her stitching journey in 1990, earning trust
-            through perfect fitting and neat finishing. Today, her daughter
-            carries that legacy forward and brings N.A Clothing to customers
-            across Pakistan.
+            Koshishein began with a simple belief: a good watch should tell a
+            story as well as the time. From signature pieces to everyday
+            classics, every watch is chosen for its craftsmanship and character.
           </p>
 
           <p>
-            You provide the fabric. We provide the perfect stitch — with
-            classic craftsmanship at just PKR 1,200 per dress.
+            Send us your own watch for engraving, or choose from our
+            collection — with personalization starting at just PKR 500.
           </p>
 
           <Link href="/about" className="text-link">

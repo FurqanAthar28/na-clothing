@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  handmadeCollection,
-  plainStitchedCollection,
+  signatureCollection,
+  everydayClassics,
 } from "@/data/collection";
+import siteConfig from "@/data/siteConfig";
 
 export default function CollectionPage() {
   return (
@@ -11,50 +12,52 @@ export default function CollectionPage() {
       {/* Page Banner */}
       <section className="collection-page-banner">
         <div className="container">
-          <p className="section-eyebrow">N.A CLOTHING</p>
+          <p className="section-eyebrow">KOSHISHEIN</p>
           <h1>Our Collections</h1>
           <p>
-            Discover our custom stitching service, handmade designs, and
-            elegant ready-to-wear dresses.
+            Discover our custom engraving service, signature designs, and
+            everyday classic watches.
           </p>
         </div>
       </section>
 
-      {/* Custom Stitching */}
+      {/* Custom Engraving */}
       <section className="collection-section custom-stitching-section">
         <div className="container">
           <div className="collection-intro">
             <div>
-              <p className="section-eyebrow">CUSTOM STITCHING</p>
+              <p className="section-eyebrow">CUSTOM ENGRAVING</p>
 
               <h2>
-                Your fabric.
-                <span>Our perfect stitch.</span>
+                Your watch.
+                <span>Our perfect engraving.</span>
               </h2>
             </div>
 
             <div>
               <p>
-                Bring your own fabric and chosen brand design. Our experienced
-                stitching team will turn it into a beautifully finished dress.
+                Bring your own watch and chosen design. Our experienced team
+                will turn it into a beautifully personalized keepsake.
               </p>
 
               <div className="stitching-price">
-                <strong>PKR 1,200</strong>
-                <span>per dress</span>
+                <strong>PKR 500</strong>
+                <span>per watch</span>
               </div>
 
               <p className="collection-note">
-                Fabric and delivery charges are separate.
+                Delivery charges are separate.
               </p>
 
               <Link
-                href="https://wa.me/923280547405?text=Assalamualaikum%2C%20I%20want%20to%20book%20custom%20stitching.%20Stitching%201200%20PKR"
+                href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
+                  "Assalamualaikum, I want to book custom engraving. Engraving PKR 500."
+                )}`}
                 className="primary-button"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Book Your Stitching
+                Book Your Engraving
               </Link>
             </div>
           </div>
@@ -62,8 +65,8 @@ export default function CollectionPage() {
           <div className="stitching-gallery">
   <div className="stitching-gallery-main">
     <Image
-      src="/images/products/modern-taupe-black-embroidery.jpg"
-      alt="Custom stitching sample"
+      src="/images/products/executive-steel-elite.jpg"
+      alt="Custom engraving sample"
       fill
       sizes="(max-width: 768px) 100vw, 50vw"
     />
@@ -71,8 +74,8 @@ export default function CollectionPage() {
 
   <div className="stitching-gallery-medium">
     <Image
-      src="/images/products/classic-black-solo.jpg"
-      alt="Custom stitching sample"
+      src="/images/products/minimalist-canvas-black.jpg"
+      alt="Custom engraving sample"
       fill
       sizes="(max-width: 768px) 50vw, 30vw"
     />
@@ -80,8 +83,8 @@ export default function CollectionPage() {
 
   <div className="stitching-gallery-small">
     <Image
-      src="/images/products/floral-navy-maxi.jpg"
-      alt="Custom stitching sample"
+      src="/images/products/trail-leather-tan.jpg"
+      alt="Custom engraving sample"
       fill
       sizes="(max-width: 768px) 50vw, 20vw"
     />
@@ -90,27 +93,27 @@ export default function CollectionPage() {
         </div>
       </section>
 
-      {/* Handmade Collection */}
+      {/* Signature Collection */}
       <section className="collection-section handmade-section">
         <div className="container">
           <div className="collection-heading">
             <div>
-              <p className="section-eyebrow">N.A UNIQUE COLLECTION</p>
+              <p className="section-eyebrow">KOSHISHEIN SIGNATURE</p>
 
               <h2>
-                Handmade designs
-                <span>by Alif Clothing Brand.</span>
+                Signature designs
+                <span>built for distinction.</span>
               </h2>
             </div>
 
             <p>
-              Explore our unique handmade designs, created for customers who
-              appreciate elegant details and timeless style.
+              Explore our premium signature watches, created for customers
+              who appreciate elegant details and timeless style.
             </p>
           </div>
 
           <div className="collection-product-grid">
-            {handmadeCollection.map((product) => (
+            {signatureCollection.map((product) => (
               <article className="collection-product-card" key={product.id}>
                 <Link
                   href={`/catalog?product=${product.id}`}
@@ -146,12 +149,12 @@ export default function CollectionPage() {
         </div>
       </section>
 
-      {/* Plain Stitched */}
+      {/* Everyday Classics */}
       <section className="collection-section plain-section">
         <div className="container">
           <div className="collection-heading">
             <div>
-              <p className="section-eyebrow">PLAIN STITCHED DRESSES</p>
+              <p className="section-eyebrow">EVERYDAY CLASSICS</p>
 
               <h2>
                 Simple.
@@ -160,13 +163,13 @@ export default function CollectionPage() {
             </div>
 
             <p>
-              Comfortable ready-to-wear dresses designed for everyday use,
-              with the neat stitching N.A Clothing is known for.
+              Comfortable everyday watches designed for daily use, with the
+              neat finishing Koshishein is known for.
             </p>
           </div>
 
           <div className="collection-product-grid">
-            {plainStitchedCollection.map((product) => (
+            {everydayClassics.map((product) => (
               <article className="collection-product-card" key={product.id}>
                 <Link
                   href={`/catalog?product=${product.id}`}

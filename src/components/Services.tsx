@@ -3,24 +3,24 @@ import Link from "next/link";
 const services = [
   {
     number: "01",
-    title: "Custom Stitching",
+    title: "Engraving & Personalization",
     description:
-      "Send us your own fabric and we will stitch your chosen brand dress with careful fitting and neat finishing.",
-    price: "PKR 1,200 / dress",
+      "Send us your own watch and we will engrave it with the design or text you choose, with careful, precise finishing.",
+    price: "PKR 500 / watch",
   },
   {
     number: "02",
-    title: "Handmade Collection",
+    title: "Signature Collection",
     description:
-      "Explore our unique handmade designs inspired by Alif Clothing Brand, created for customers who love something special.",
-    price: "Unique ready-to-wear designs",
+      "Explore our premium signature designs, chosen for customers who love a distinctive, refined watch.",
+    price: "Unique premium designs",
   },
   {
     number: "03",
-    title: "Plain Stitched Dresses",
+    title: "Everyday Classics",
     description:
-      "Simple, elegant and comfortable ready-to-wear dresses designed for everyday use.",
-    price: "Ready-to-wear",
+      "Simple, elegant and comfortable watches designed for everyday wear.",
+    price: "Ready to wear",
   },
 ];
 
@@ -40,9 +40,8 @@ export default function Services() {
           </div>
 
           <p>
-            From stitching your own fabric to ready-to-wear designs, N.A
-            Clothing brings classic craftsmanship and simple elegance
-            together.
+            From engraving your own watch to ready-to-wear designs, Koshishein
+            brings timeless craftsmanship and simple elegance together.
           </p>
         </div>
 
